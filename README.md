@@ -1,6 +1,7 @@
 SPRING BOOT SAMPLE WEB APPLICATION
 
 -using derby database
+
 -contains a dockerfile to deploy on docker container directly
 
 
