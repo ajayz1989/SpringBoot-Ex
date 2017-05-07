@@ -1,18 +1,12 @@
 #Download base image 
-FROM centos:latest
+FROM frolvlad/alpine-oraclejdk8:slim
 
-# download java-8
-RUN yum -y update
-RUN yum -y install java-1.8.0-openjdk-devel
-# Update Software repository
-RUN yum clean all
 
-#Define the ENV variable
-ENV JAVA_HOME = /user/lib/jvm/java-1.8.0-openjdk
-ENV PATH=${JAVA_HOME}/bin:${PATH}
+#Expose ports
+EXPOSE 8080:8080
 
-# Volume configuration
-VOLUME /tmp
+#Copy jar files to current loacation
 ADD Spring-Boot-Ex-0.0.1.jar boot.jar
-RUN sh -c 'touch /boot.jar'
-ENTRYPOINT ["sh","-c","java -Djava.security.egd=file:/dev/./urandom -jar" ,"/boot.jar"]
+
+#Define entry point command to execute
+ENTRYPOINT ["java", "-jar" ,"boot.jar"]
