@@ -1,10 +1,10 @@
-#SPRING BOOT SAMPLE WEB APPLICATION
+# SPRING BOOT SAMPLE WEB APPLICATION
 
-###-using derby database
+### -using derby database
 
-###-contains a dockerfile to deploy on docker container directly
+### -contains a dockerfile to deploy on docker container directly
 
 
-##Contains all CRUD operations for a Spring Boot application
+## Contains all CRUD operations for a Spring Boot application
 
-###So just clone deploy , run and ENJOY !!!
+### So just clone deploy , run and ENJOY !!!
